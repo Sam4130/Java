@@ -1,0 +1,35 @@
+/**
+ *
+ * @author sam schoenberg
+ */
+import java.util.Scanner;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+public class FloydTriangle extends JPanel
+  {
+  public static void main(String[] args)
+  {
+      JFrame frame = new JFrame("Draw FloydTriangle");
+     frame.setContentPane(new DrawFloydTriangleJPanle());
+    
+    
+    FloydTriangleJPanel drawFloydTriangleJPanel = new FloydTriangleJPanel();
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 210);
+        frame.setVisible(true);   
+        
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the number of rows which you want in your Floyd Triangle: ");
+int r = sc.nextInt();
+int n=0;
+for(int i=0; i<r; i++)
+{
+for(int j=0; j<=i; j++)
+{
+System.out.print(++n+" ");
+}
+System.out.println();
+}
+  }
+}
+
